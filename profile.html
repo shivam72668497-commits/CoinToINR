@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050816" />
+  <title>Shivearnapp | Profile</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div id="toastBadge" class="badge">i</div>
+    <div id="toastMsg" class="msg"></div>
+  </div>
+
+<main class="page full">
+  <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <section class="shell full">
+    <div class="content">
+      <div class="header">
+        <div>
+          <p class="subtitle" style="margin:0">Account</p>
+          <h1 class="title" id="name">Loading...</h1>
+        </div>
+        <button id="logoutBtn" class="ghost" style="width:auto;height:42px;padding:0 14px">Logout</button>
+      </div>
+
+      <div class="card center">
+        <div class="logoWrap" style="width:110px;height:110px;border-radius:32px;margin:0 auto 14px">
+          <img id="photo" src="assets/shivearnapp.png" alt="Profile" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
+          <div class="logoFallback hidden">S</div>
+        </div>
+        <p id="email" class="small" style="margin-top:0"></p>
+        <div class="sep"></div>
+        <div class="grid" style="width:100%">
+          <div class="banner">
+            <div class="small">UID</div>
+            <div id="uid" style="margin-top:6px;font-size:12px;word-break:break-all"></div>
+          </div>
+          <div class="banner">
+            <div class="small">Joined</div>
+            <div id="joined" style="margin-top:6px;font-size:16px;font-weight:800"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="twoCol">
+        <a class="secondary" href="dashboard.html" style="display:grid;place-items:center;text-decoration:none"><span class="btnText">Dashboard</span></a>
+        <a class="secondary" href="contact.html" style="display:grid;place-items:center;text-decoration:none"><span class="btnText">Contact</span></a>
+      </div>
+
+      <p class="footer">Profile data comes from Firebase Auth and Realtime Database</p>
+    </div>
+  </section>
+</main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+  <script src="firebaseconfig.js"></script>
+  <script src="app.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

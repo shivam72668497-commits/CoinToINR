@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050816" />
+  <title>Shivearnapp</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div id="toastBadge" class="badge">i</div>
+    <div id="toastMsg" class="msg"></div>
+  </div>
+
+<main class="page center">
+  <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <section class="shell">
+    <div class="content center">
+      <div class="brand">
+        <div class="logoWrap">
+          <img src="assets/shivearnapp.png" alt="Shivearnapp" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')" />
+          <div class="logoFallback hidden">S</div>
+        </div>
+        <h1 class="brandName">Shivearnapp</h1>
+        <p class="brandSub">Secure access • Fast load • Trusted platform</p>
+      </div>
+      <div class="card" style="width:100%;margin-top:18px">
+        <div class="grid">
+          <a class="primary" href="login.html" style="display:grid;place-items:center;text-decoration:none"><span class="btnText">Open Login</span></a>
+          <a class="secondary" href="signup.html" style="display:grid;place-items:center;text-decoration:none"><span class="btnText">Create Account</span></a>
+        </div>
+        <div class="sep"></div>
+        <p class="small center">This page routes the user to the correct screen based on authentication state.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  if (window.FIREBASE_READY && window.auth) {
+    window.auth.onAuthStateChanged(function(user){
+      if (user) window.location.replace('dashboard.html');
+    });
+  }
+</script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+  <script src="firebaseconfig.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
