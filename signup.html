@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050816" />
+  <title>Shivearnapp | Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div id="toastBadge" class="badge">i</div>
+    <div id="toastMsg" class="msg"></div>
+  </div>
+
+<main class="page">
+  <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <section class="shell">
+    <div class="content">
+      <div class="header">
+        <a class="back" href="login.html" aria-label="Back">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div style="flex:1;text-align:center;padding-right:42px">
+          <h1 class="title" style="font-size:24px;margin:0">Create Account</h1>
+          <p class="subtitle" style="margin-top:6px">Join Shivearnapp</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="authForm" class="grid" autocomplete="on">
+          <div class="field">
+            <svg class="iconLeft" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c1.9-4.1 5.3-6 8-6s6.1 1.9 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input id="name" class="input withIcon" type="text" placeholder="Full name" autocomplete="name" />
+          </div>
+          <div class="field">
+            <svg class="iconLeft" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5L12 12.8L20 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8"/></svg>
+            <input id="email" class="input withIcon" type="email" placeholder="Email address" autocomplete="email" />
+          </div>
+          <div class="field">
+            <svg class="iconLeft" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 10V7.9A4.5 4.5 0 0 1 12 3.4a4.5 4.5 0 0 1 4.5 4.5V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 10h11A2.5 2.5 0 0 1 20 12.5V18a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18v-5.5A2.5 2.5 0 0 1 6.5 10Z" stroke="currentColor" stroke-width="1.8"/></svg>
+            <input id="password" class="input withIcon" type="password" placeholder="Password" autocomplete="new-password" />
+            <button type="button" id="togglePassword" class="eye" aria-label="Show password">
+              <svg id="eyeOpen" viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M2.5 12c2.3-4.9 5.7-7.5 9.5-7.5S19.2 7.1 21.5 12c-2.3 4.9-5.7 7.5-9.5 7.5S4.8 16.9 2.5 12Z" stroke="currentColor" stroke-width="1.7"/><path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.7"/></svg>
+              <svg id="eyeOff" class="hidden" viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M3 3l18 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6.8 6.7C5.1 7.9 3.8 9.7 3 12c2.3 4.9 5.7 7.5 9.5 7.5 1 0 1.9-.1 2.8-.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+
+          <label class="checkbox"><input id="rememberMe" type="checkbox" checked /><span>Keep me signed in</span></label>
+
+          <button id="signupBtn" class="primary" type="submit">
+            <span class="btnSpinner"></span><span class="btnText">Create Account</span>
+          </button>
+
+          <div class="divider">OR</div>
+          <button id="googleBtn" class="secondary" type="button">
+            <span class="btnSpinner"></span>
+            <span class="btnText" style="display:flex;align-items:center;gap:10px;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.7-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.3 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-1.3 3.8-4 6.4-8.1 7.4l.1.1 6.2 5.2C36.9 36.8 44 31 44 24c0-1.3-.1-2.7-.4-3.9z"/></svg>
+              Continue with Google
+            </span>
+          </button>
+
+          <p class="small center">Already have an account? <a class="linkBtn" href="login.html">Login</a></p>
+        </form>
+      </div>
+
+      <p class="footer">Secure Login • Fast Access • Trusted Platform</p>
+    </div>
+  </section>
+</main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+  <script src="firebaseconfig.js"></script>
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

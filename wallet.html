@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050816" />
+  <title>Shivearnapp | Wallet</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div id="toastBadge" class="badge">i</div>
+    <div id="toastMsg" class="msg"></div>
+  </div>
+
+<main class="page full">
+  <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <section class="shell full">
+    <div class="content">
+      <div class="header">
+        <div>
+          <p class="subtitle" style="margin:0">Wallet overview</p>
+          <h1 class="title" id="name">Loading...</h1>
+        </div>
+        <button id="logoutBtn" class="ghost" style="width:auto;height:42px;padding:0 14px">Logout</button>
+      </div>
+
+      <div class="heroStats">
+        <div class="stat"><div class="k">Current balance</div><div id="balance" class="v">0</div></div>
+        <div class="stat"><div class="k">Total earned</div><div id="earned" class="v">0</div></div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 8px;font-size:20px">Withdrawal rules</h2>
+        <p class="small">Connect this page to your withdrawal workflow later. For now it shows the user balance from Firebase.</p>
+        <div class="sep"></div>
+        <div class="banner">
+          <div class="small">Account status</div>
+          <div id="status" style="font-size:22px;font-weight:900;margin-top:6px">active</div>
+        </div>
+        <div class="sep"></div>
+        <a class="secondary" href="contact.html" style="display:grid;place-items:center;text-decoration:none"><span class="btnText">Need Support?</span></a>
+      </div>
+
+      <nav class="nav">
+        <a href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6.3H9.5V21H5a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Home
+        </a>
+        <a href="tasks.html">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 4h10a2 2 0 0 1 2 2v13a1 1 0 0 1-1.5.86L12 17.2l-5.5 2.66A1 1 0 0 1 5 19V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Tasks
+        </a>
+        <a class="active" href="wallet.html">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.6"/><path d="M16 11h4V9h-4a1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          Wallet
+        </a>
+        <a href="profile.html">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.8-4 5.2-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Profile
+        </a>
+        <a href="contact.html">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H7l-3 3V5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Help
+        </a>
+      </nav>
+
+      <p class="footer">Balance is read from Firebase Realtime Database</p>
+    </div>
+  </section>
+</main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+  <script src="firebaseconfig.js"></script>
+  <script src="app.js"></script>
+  <script src="wallet.js"></script>
+</body>
+</html>
